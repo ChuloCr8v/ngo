@@ -24,7 +24,7 @@ const Objectives = (props: Props) => {
   ];
 
   return (
-    <section className="py-16 flex flex-col justify-center items-center gap-16">
+    <section className="py-16 flex flex-col justify-center items-center gap-16 px-4">
       <div className="flex flex-col items-center justify-center max-w-[800px] w-full gap-4">
         <div className="w-[150px] h-1 bg-brandGreen"></div>
         <h3 className="font-bold text-2xl">We Focus on Youth Initiatives</h3>
@@ -38,9 +38,12 @@ const Objectives = (props: Props) => {
           Learn More...
         </Button>
       </div>
-      <div className="cards flex items-center gap-6">
+      <div className="cards flex md:grid grid-cols-2 lg:grid-cols-4 flex-col items-center gap-6 ">
         {cardData.map((card) => (
-          <div className="h-[300px] w-[200px] rounded-xl bg-brandGreen text-white flex flex-col justify-start items-center px-4 pt-20">
+          <div
+            key={card.text}
+            className="h-[300px] max-w-[400px] w-full rounded-xl bg-brandGreen text-white flex flex-col justify-start items-center px-4 pt-20"
+          >
             <div className="bg-brandYellow rounded-full p-2 h-12 w-12 flex justify-center items-center">
               <Image src={card.icon} alt={card.text} height={50} width={50} />
             </div>

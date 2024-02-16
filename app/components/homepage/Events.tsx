@@ -21,23 +21,28 @@ const Events = (props: Props) => {
     },
   ];
   return (
-    <section className="bg-brandGreen py-36 w-screen flex flex-col items-center text-white">
-      <div className="max-w-7xl w-full grid grid-cols-2">
-        <div className="max-w-[400px] w-full">
-          <h3 className="text-3xl mb-6 font-bold">LATEST EVENTS</h3>
+    <section className="bg-brandGreen py-6 xl:py-20 w-screen flex flex-col items-center text-white">
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 p-4">
+        <div className="lg:max-w-[400px] w-full">
+          <h3 className="text-2xl text-center md:text-left md:text-3xl mb-6 font-bold">
+            LATEST EVENTS
+          </h3>
           <p className="">
             Open fifth midst divided great fly gathering living deep no
             abundantly. Evening appear saying that forth god wito Given sixth
-            days of very Third spirit waters seas. Calleded can't his third.
-            Evening upon. All stars. Seasons a the a dry for third days
+            days of very Third spirit waters seas. Calleded can&apos;t his
+            third. Evening upon. All stars. Seasons a the a dry for third days.
           </p>
           <button className="flex flex-col items-center mt-6 text-lg">
             Learn More <div className="w-full h-1 bg-brandYellow"></div>
           </button>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col md:grid grid-cols-2 flex-wrap items-center gap-6 mt-12 lg:mt-0">
           {eventData.map((e) => (
-            <div className="flex flex-col items-center w-[400px] h-[550px] bg-white">
+            <div
+              key={e.title}
+              className="flex flex-col items-center w-full max-w-[400px] h-[550px] bg-white"
+            >
               <div className="top h-[200px] w-full overflow-hidden relative">
                 <div className="bg-gradient-to-t from-black opacity-70 to-transparent h-full w-full absolute top-0 left-0"></div>
                 <Image

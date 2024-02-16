@@ -17,7 +17,7 @@ const Button = (props: Props) => {
           href={props.btnLink}
           className={twMerge(
             props.className,
-            " h-[70px] flex items-center justify-center px-8 uppercase font-semibold text-xl hover:scale-[0.9] duration-200 text-white"
+            " h-[50px] md:h-[70px] flex items-center justify-center px-8 uppercase font-semibold text-md md:text-xl hover:scale-[0.9] duration-200 text-white"
           )}
         >
           {props.title}

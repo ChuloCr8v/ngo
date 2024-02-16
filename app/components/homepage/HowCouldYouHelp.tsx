@@ -32,11 +32,14 @@ const HowCouldYouHelp = (props: Props) => {
     },
   ];
   return (
-    <section className="flex flex-col items-center py-12">
-      <SectionTitle SectionTitle={sectionTitle} className={""} />
-      <div className="flex items-center gap-12 mt-8">
+    <section className="flex flex-col items-center py-12 p-4">
+      <SectionTitle SectionTitle={sectionTitle} className={"text-3xl"} />
+      <div className="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 items-center gap-6 lg:gap-12 mt-8">
         {cardData.map((card) => (
-          <div className="h-[400px] w-full max-w-[300px] rounded-xl bg-white text-black shadow-lg flex flex-col justify-start items-center px-4 pt-10 border border-gray-300">
+          <div
+            key={card.title}
+            className="h-[400px] w-full max-w-[400px] rounded-xl bg-white text-black shadow-lg flex flex-col justify-start items-center px-4 pt-10 border border-gray-300"
+          >
             <div className="bg-brandGreen rounded-full p-2 h-20 w-20 flex justify-center items-center">
               <Image src={card.icon} alt={card.text} height={50} width={50} />
             </div>

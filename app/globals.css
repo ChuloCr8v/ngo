@@ -42,4 +42,74 @@ body {
   background-image: url("/volunteer_.png");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
+}
+
+.page-hero {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+.team-hero {
+  background-image: url("/team-hero.png");
+}
+
+.publications-hero {
+  background-image: url("/publication-hero.png");
+}
+
+.donation-hero {
+  background-image: url("/donation-hero.png");
+}
+
+.enq-form-wrapper {
+  background-image: url("/enq-form-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ant-select-selector {
+  background: #d1d5db !important;
+}
+
+.contact-hero {
+  background-image: url("/contact-hero.png");
+}
+
+.mapboxgl-canvas {
+  height: 300px !important;
+  width: auto !important;
+}
+
+.mapboxgl-control-container,
+.mapboxgl-children {
+  display: none !important;
+}
+
+.events-hero {
+  background-image: url("/events.png");
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-pagination
+  .ant-pagination-item-active {
+  background: green !important;
+  color: white !important;
+  border-radius: 100%;
+}
+
+:where(.css-dev-only-do-not-override-1xg9z9n).ant-pagination
+  .ant-pagination-item-active
+  > a {
+  color: white !important;
+}
+
+.swiper-slide {
+  display: flex !important;
 }

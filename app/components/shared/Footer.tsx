@@ -49,7 +49,7 @@ const Footer = (props: Props) => {
 
   return (
     <footer className="relative bg-[#030820] w-screen flex flex-col items-center justify-center">
-      <div className="max-w-7xl w-full py-24 grid grid-cols-3 gap-12">
+      <div className="max-w-7xl w-full py-24 grid lg:grid-cols-3 gap-12 px-4">
         <div className="flex flex-col items-start gap-6">
           <h3 className="font-bold text-3xl text-left text-white">About Us</h3>
           <p className="text-left text-gray-500 text-base">
@@ -64,9 +64,11 @@ const Footer = (props: Props) => {
           <h3 className="font-bold text-3xl text-left text-white">
             Navigation Links
           </h3>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid lg:grid-cols-2 gap-5">
             {footerNav.map((nav) => (
-              <Link href={nav.url}>{nav.title}</Link>
+              <Link href={nav.url} key={nav.title}>
+                {nav.title}
+              </Link>
             ))}
           </div>
         </div>
@@ -76,7 +78,7 @@ const Footer = (props: Props) => {
           </h3>
           <div className="">
             {contactProps.map((c) => (
-              <p>{c.text}</p>
+              <p key={c.text}>{c.text}</p>
             ))}
           </div>
         </div>
