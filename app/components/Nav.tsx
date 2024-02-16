@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -10,7 +10,8 @@ type Props = {
 };
 
 const Nav = (props: Props) => {
-  const route = window.location.pathname;
+  const route = usePathname();
+  console.log(route);
 
   const navItems = [
     {
